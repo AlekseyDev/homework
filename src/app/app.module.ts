@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {MatCardModule, MatGridListModule} from '@angular/material';
+import { CitiesContinentFilterPipe } from '../pipes/cities-continent-filter.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CitiesContinentFilterPipe
   ],
   imports: [
     BrowserModule,
