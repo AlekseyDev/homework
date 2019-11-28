@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import {MatCardModule, MatGridListModule} from '@angular/material';
 import { CitiesContinentFilterPipe } from '../pipes/cities-continent-filter.pipe';
 import { AppCityComponent } from './app-city/app-city.component';
-import { AppTemperaturComponent } from './app-temperatur/app-temperatur.component';
+import { AppPopularityComponent } from './app-popularity/app-popularity.component';
 import { AppSocialComponent } from './app-social/app-social.component';
 
 @NgModule({
@@ -13,7 +13,7 @@ import { AppSocialComponent } from './app-social/app-social.component';
     AppComponent,
     CitiesContinentFilterPipe,
     AppCityComponent,
-    AppTemperaturComponent,
+    AppPopularityComponent,
     AppSocialComponent
   ],
   imports: [

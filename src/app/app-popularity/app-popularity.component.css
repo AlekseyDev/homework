@@ -1,4 +1,4 @@
-.temperatur {
+.popularity {
   background: #5fb3f9;
   text-align: center;
   padding: 1em 1em;
@@ -19,18 +19,18 @@ span.line {
   display: block;
   margin: 0.6em auto 0em;
 }
-.temperatur h5 {
+.popularity h5 {
   color: #fff;
   font-size: 1em;
 }
-.temperatur h2 {
+.popularity h2 {
   color: #fff;
   font-size: 2.0em;
   display: inline-block;
   vertical-align: top;
   font-family: 'Roboto', sans-serif;
 }
-.temperatur h6 {
+.popularity h6 {
   font-size: 1em;
   color: #fff;
   margin:1em 0em 0em 0em;

@@ -2,11 +2,11 @@ import {Component, Input, OnInit} from '@angular/core';
 import {ICity} from '../../dto/Interfaces';
 
 @Component({
-  selector: 'app-temperatur',
-  templateUrl: './app-temperatur.component.html',
-  styleUrls: ['./app-temperatur.component.css']
+  selector: 'app-popularity',
+  templateUrl: './app-popularity.component.html',
+  styleUrls: ['./app-popularity.component.css']
 })
-export class AppTemperaturComponent implements OnInit {
+export class AppPopularityComponent implements OnInit {
 
   constructor() { }
 
