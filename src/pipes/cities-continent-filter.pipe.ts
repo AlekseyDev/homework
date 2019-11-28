@@ -13,3 +13,5 @@ export class CitiesContinentFilterPipe implements PipeTransform {
     return cities.filter(item => item.cityInfo.continent === continent);
   }
 }
+
+// доп. информацию по созданию Pipe фильтров https://stackoverflow.com/questions/34164413/how-to-apply-filters-to-ngfor

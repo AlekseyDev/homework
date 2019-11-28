@@ -52,6 +52,14 @@ a:hover {
   text-decoration: underline;
 }
 
+.chetniy {
+  background-color: #fda660;
+}
+
+.nechetniy {
+  background-color: gainsboro;
+}
+
 /*--header start here--*/
 h1 {
   text-align: center;
@@ -281,6 +289,9 @@ i.text-info{
   background: #fff;
   padding: 1.5em 1em;
   border-radius: 0px 0px 5px 5px;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
 }
 .village h3 {
   text-align: center;
