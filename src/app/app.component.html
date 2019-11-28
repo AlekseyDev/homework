@@ -30,30 +30,8 @@
     </div>
   </div>
   <div class="element-right">
-    <div class="temperatur">
-      <h5>Популярность</h5>
-      <span class="w-line"> </span>
-      <span class="cloud"> </span>
-      <h2>{{selectedCity.cityInfo.popularity}}<sup class="degree">рейтинг</sup></h2>
-      <h6>{{selectedCity.favourite === true ? 'Да ' : 'Нет '}}<sup class="degree">избранный</sup></h6>
-    </div>
-    <div class="teddy-bear">
-      <div class="teddy-text">
-        <h4>Дополнительная информация</h4>
-        <span class="w-line"> </span>
-        <img [src]="selectedCity.socialInfo.img" alt="" class="img-responsive">
-      </div>
-      <div class="teddy-follow">
-        <ul>
-          <li class="folw-h"><h3>{{selectedCity.socialInfo.followers}}</h3>
-            <p>Followers</p>
-          </li>
-          <li><h3>{{selectedCity.socialInfo.folowing}}</h3>
-            <p>Following</p>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <app-temperatur [cityItem]="selectedCity"></app-temperatur>
+    <app-social [socialItem]="selectedCity.socialInfo"></app-social>
   </div>
   <div class="clear"> </div>
 </div>

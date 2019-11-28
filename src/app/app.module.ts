@@ -5,12 +5,16 @@ import { AppComponent } from './app.component';
 import {MatCardModule, MatGridListModule} from '@angular/material';
 import { CitiesContinentFilterPipe } from '../pipes/cities-continent-filter.pipe';
 import { AppCityComponent } from './app-city/app-city.component';
+import { AppTemperaturComponent } from './app-temperatur/app-temperatur.component';
+import { AppSocialComponent } from './app-social/app-social.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CitiesContinentFilterPipe,
-    AppCityComponent
+    AppCityComponent,
+    AppTemperaturComponent,
+    AppSocialComponent
   ],
   imports: [
     BrowserModule,

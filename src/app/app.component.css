@@ -77,13 +77,6 @@ h1 {
   padding: 1em 1em;
   margin: -3px 0px 0px 0px;
 }
-.temperatur {
-  background: #5fb3f9;
-  text-align: center;
-  padding: 1em 1em;
-  border-radius: 5px;
-  margin-bottom: 2.5em;
-}
 .ele-strip ul{
   text-align: center;
 }
@@ -97,58 +90,6 @@ h1 {
   color: #fff;
 }
 /*--teddy-bear--*/
-.teddy-bear {
-  text-align: center;
-}
-.teddy-text {
-  background: #fd7b87;
-  padding: 1.2em 1em;
-  border-radius: 5px 5px 0px 0px;
-}
-span.line {
-  background: url(../assets/images/line.png)no-repeat;
-  width: 103px;
-  height: 2px;
-  display: block;
-  margin: 0.6em auto 0em;
-}
-span.w-line {
-  background: url(../assets/images/w-line.png)no-repeat;
-  width: 103px;
-  height: 2px;
-  display: block;
-  margin:0.73em auto 0.72em;
-}
-.teddy-text h4 {
-  color: #fff;
-}
-.teddy-text img {
-  border: 3px solid #fff;
-  border-radius: 50px;
-  width: 60px;
-  height: 60px;
-}
-.teddy-follow {
-  background: #f2f1ef;
-  padding: 0.7em 0em 0.7em 0em;
-  border-radius: 0px 0px 4px 4px;
-}
-.teddy-follow li {
-  display: inline-block;
-  padding:0em 0.9em;
-}
-.teddy-follow li h3 {
-  font-size: 0.95em;
-  color: #000;
-  font-weight: bold;
-}
-.teddy-follow li p {
-  font-size: 0.8em;
-  color: #8A8A8A;
-}
-.teddy-follow li.folw-h {
-  border-right: 1px solid #000;
-}
 .element-bg-img {
   text-align: center;
   border-color: black;
@@ -173,22 +114,7 @@ span.cloud {
   float: right;
   width: 35%;
 }
-.temperatur h5 {
-  color: #fff;
-  font-size: 1em;
-}
-.temperatur h2 {
-  color: #fff;
-  font-size: 3.2em;
-  display: inline-block;
-  vertical-align: top;
-  font-family: 'Roboto', sans-serif;
-}
-.temperatur h6 {
-  font-size: 1em;
-  color: #fff;
-  margin:1em 0em 0em 0em;
-}
+
 ul li.anc-bor {
   border-right: none;
 }
@@ -250,9 +176,6 @@ i.text-info{
 {
 
   background-color:#fda660;
-}
-.degree{
-  font-size: 10pt;
 }
 /*--village start here--*/
 .village {
