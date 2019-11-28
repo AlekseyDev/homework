@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ICity} from '../dto/Interfaces';
 import { cities } from '../mock/cities';
-import {init} from 'protractor/built/launcher';
+import {CitiesContinentFilterPipe} from '../pipes/cities-continent-filter.pipe';
 
 @Component({
   selector: 'app-root',
@@ -10,8 +10,13 @@ import {init} from 'protractor/built/launcher';
 })
 export class AppComponent implements OnInit {
   title = 'homework';
+
+  constructor(private citiesContinentPipe: CitiesContinentFilterPipe
+  ) {}
+
   public cities: ICity[] = cities;
   public selectedContinent: string;
+  public selectedCity: ICity;
   public continents: Array<string>;
   /* с выбором конкретного континента, подчеркнем его, добавив соответствующий стиль */
   public classSelectedA = 'selectedAUnderline';
@@ -25,6 +30,10 @@ export class AppComponent implements OnInit {
 
   public setSelected(continent: string) {
     this.selectedContinent = continent;
+    const findItems = this.citiesContinentPipe.transform(this.cities, this.selectedContinent);
+    if (findItems !== null && findItems !== undefined && findItems.length > 0) {
+      this.selectedCity = findItems[0];
+    }
   }
 
   public getSelectedAClass(continent: string): string {

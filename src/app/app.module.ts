@@ -17,7 +17,7 @@ import { AppCityComponent } from './app-city/app-city.component';
     MatCardModule,
     MatGridListModule
   ],
-  providers: [],
+  providers: [CitiesContinentFilterPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
