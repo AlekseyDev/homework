@@ -34,10 +34,18 @@ export class AppComponent implements OnInit {
 
   public setSelected(continent: string) {
     this.selectedContinent = continent;
-    const findItems = this.citiesContinentPipe.transform(this.cities, this.selectedContinent);
-    if (findItems !== null && findItems !== undefined && findItems.length > 0) {
-      this.selectedCity = findItems[0];
+    const res = this.getFirstElementByFilter(this.selectedContinent);
+    if (res !== null) {
+      this.selectedCity = res;
     }
+  }
+
+  private getFirstElementByFilter(continent) : ICity {
+    const findItems = this.citiesContinentPipe.transform(this.cities, continent);
+    if (findItems !== null && findItems !== undefined && findItems.length > 0) {
+      return findItems[0];
+    }
+    return null;
   }
 
   public getSelectedAClass(continent: string): string {
