@@ -123,8 +123,10 @@ span.w-line {
   color: #fff;
 }
 .teddy-text img {
-  border-radius: 70px;
   border: 3px solid #fff;
+  border-radius: 50px;
+  width: 60px;
+  height: 60px;
 }
 .teddy-follow {
   background: #f2f1ef;
@@ -146,6 +148,13 @@ span.w-line {
 }
 .teddy-follow li.folw-h {
   border-right: 1px solid #000;
+}
+.element-bg-img {
+  text-align: center;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5%;
 }
 .element-bg-img img {
   border-radius: 6px 6px 0px 0px;
@@ -241,6 +250,9 @@ i.text-info{
 {
 
   background-color:#fda660;
+}
+.degree{
+  font-size: 10pt;
 }
 /*--village start here--*/
 .village {

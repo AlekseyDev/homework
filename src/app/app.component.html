@@ -1,7 +1,9 @@
 <h1>Hot Weather Widget</h1>
 <div class="element">
   <div class="element-left">
-    <div class="element-bg-img"><img src="../assets/images/1.jpg" alt="" class="img-responsive"> </div>
+    <div class="element-bg-img">
+      <img [src]="selectedCity.cityInfo.img" alt="" class="img-responsive">
+    </div>
     <div class="element-left-bottom">
       <div class="ele-strip">
         <ul>
@@ -18,7 +20,8 @@
             <div class="activity-row"
                  *ngFor="let item of cities | citiesContinentPipe : selectedContinent; index as i;"
                  [attr.data-index]="i"
-                 [className]="i % 2 == 0 ? 'chetniy' : 'nechetniy'">
+                 [className]="i % 2 == 0 ? 'chetniy' : 'nechetniy'"
+                 (click)="setSelectedCity(item)">
               <app-city [cityItem]="item"></app-city>
             </div>
           </div>
@@ -28,24 +31,24 @@
   </div>
   <div class="element-right">
     <div class="temperatur">
-      <h5>Et harum quidem</h5>
+      <h5>Популярность</h5>
       <span class="w-line"> </span>
       <span class="cloud"> </span>
-      <h2>14<sup class="degree">°</sup></h2>
-      <h6>Water 20<sup class="degree">°</sup></h6>
+      <h2>{{selectedCity.cityInfo.popularity}}<sup class="degree">рейтинг</sup></h2>
+      <h6>{{selectedCity.favourite === true ? 'Да ' : 'Нет '}}<sup class="degree">избранный</sup></h6>
     </div>
     <div class="teddy-bear">
       <div class="teddy-text">
-        <h4>Nam libero voluptatem</h4>
+        <h4>Дополнительная информация</h4>
         <span class="w-line"> </span>
-        <img src="../assets/images/b1.jpg" alt=""  class="img-responsive">
+        <img [src]="selectedCity.socialInfo.img" alt="" class="img-responsive">
       </div>
       <div class="teddy-follow">
         <ul>
-          <li class="folw-h"><h3>2850</h3>
+          <li class="folw-h"><h3>{{selectedCity.socialInfo.followers}}</h3>
             <p>Followers</p>
           </li>
-          <li><h3>675</h3>
+          <li><h3>{{selectedCity.socialInfo.folowing}}</h3>
             <p>Following</p>
           </li>
         </ul>

@@ -22,9 +22,13 @@ export class AppComponent implements OnInit {
   public classSelectedA = 'selectedAUnderline';
 
   ngOnInit(): void {
-    if (cities !== null && cities !== undefined) {
+      if (cities !== null && cities !== undefined) {
       // достанем уникальные наименования из поля cityInfo.continent
       this.continents = [...new Set(cities.map(item => item.cityInfo.continent))];
+
+      if (cities.length > 0) {
+        this.selectedCity = cities[0];
+      }
     }
   }
 
@@ -43,6 +47,10 @@ export class AppComponent implements OnInit {
       }
     }
     return '';
+  }
+
+  public setSelectedCity(city: ICity) {
+    this.selectedCity = city;
   }
 }
 

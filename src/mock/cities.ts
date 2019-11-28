@@ -4,7 +4,7 @@ export const cities: ICity[] = [
   {
     id: 1,
     name: 'Moscow',
-    favourite: false,
+    favourite: true,
     cityInfo: {
       img: 'assets/img/russia.png',
       popularity: 5,
@@ -42,7 +42,7 @@ export const cities: ICity[] = [
   {
     id: 3,
     name: 'Ekaterinburg',
-    favourite: false,
+    favourite: true,
     cityInfo: {
       img: 'assets/img/russia.png',
       popularity: 3,
@@ -99,7 +99,7 @@ export const cities: ICity[] = [
   {
     id: 6,
     name: 'Mexiko',
-      favourite: false,
+      favourite: true,
       cityInfo: {
         img: 'assets/img/mexika.png',
         popularity: 2,
