@@ -24,11 +24,12 @@ export class AppHomework2Component implements OnInit {
   }
 
   public btnSearchData(): void {
-        if (this.term !== '') {
-            const data = this.gitHubService.getData(this.term);
-            data.subscribe((data1) => {
-              this.items = data1.items;
-            });
-        }
+    this.items = null;
+    if (this.term !== '') {
+      const data = this.gitHubService.getData(this.term);
+      data.subscribe((data1) => {
+        this.items = data1.items;
+      });
+    }
   }
 }

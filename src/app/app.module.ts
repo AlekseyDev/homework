@@ -2,7 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {MatButtonModule, MatCardModule, MatFormFieldModule, MatGridListModule, MatInputModule, MatListModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatCardModule,
+  MatFormFieldModule,
+  MatGridListModule,
+  MatInputModule,
+  MatListModule,
+  MatProgressSpinnerModule
+} from '@angular/material';
 import { CitiesContinentFilterPipe } from '../pipes/cities-continent-filter.pipe';
 import { AppCityComponent } from './app-homework1/app-city/app-city.component';
 import { AppPopularityComponent } from './app-homework1/app-popularity/app-popularity.component';
@@ -35,7 +43,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatInputModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatListModule
+    MatListModule,
+    MatProgressSpinnerModule
   ],
   providers: [
     CitiesContinentFilterPipe,

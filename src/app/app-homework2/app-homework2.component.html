@@ -9,7 +9,7 @@
   </div>
 </div>
 
-<mat-list>
+<mat-list *ngIf="items != null; else loader">
   <mat-list-item *ngFor="let item of items" class="matItem">
     <img matListAvatar [src]="item.owner.avatar_url">
     <h3 matLine> {{item.name}} </h3>
@@ -21,3 +21,9 @@
     </p>
   </mat-list-item>
 </mat-list>
+
+<ng-template #loader>
+  <div class="load-container">
+    <mat-spinner></mat-spinner>
+  </div>
+</ng-template>
