@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import { ISocialInfo} from '../../dto/Interfaces';
+import { ISocialInfo} from '../../../dto/Interfaces';
 
 @Component({
   selector: 'app-social',

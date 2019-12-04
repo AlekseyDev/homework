@@ -1,0 +1,37 @@
+<h1>Hot Weather Widget</h1>
+<div class="element">
+  <div class="element-left">
+    <div class="element-bg-img">
+      <img [src]="selectedCity.cityInfo.img" alt="" class="img-responsive">
+    </div>
+    <div class="element-left-bottom">
+      <div class="ele-strip">
+        <ul>
+          <li *ngFor="let cont of continents" (click)="setSelected(cont)">
+            <a href="#" [className]="getSelectedAClass(cont)">{{cont}}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="village">
+        <h3>Континент: {{selectedContinent}}</h3>
+        <span class="line"> </span>
+        <div class="activity_box">
+          <div class="scrollbar" id="style-2">
+            <div class="activity-row"
+                 *ngFor="let item of cities | citiesContinentPipe : selectedContinent; index as i;"
+                 [attr.data-index]="i"
+                 [className]="i % 2 == 0 ? 'chetniy' : 'nechetniy'"
+                 (click)="setSelectedCity(item)">
+              <app-city [cityItem]="item"></app-city>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="element-right">
+    <app-popularity [cityItem]="selectedCity"></app-popularity>
+    <app-social [socialItem]="selectedCity.socialInfo"></app-social>
+  </div>
+  <div class="clear"> </div>
+</div>

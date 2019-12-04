@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {ICity} from '../../dto/Interfaces';
+import {ICity} from '../../../dto/Interfaces';
 
 @Component({
   selector: 'app-city',
