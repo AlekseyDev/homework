@@ -1,11 +1,12 @@
 <div class="divSeachPanel">
   <div class="divMatFieldSearch">
     <mat-form-field class="search-input-data">
-      <input matInput placeholder="search data..." value="Angular" [(ngModel)]="term">
+      <input matInput placeholder="параметры поиска..." [formControl]="termValidatorCtrl" [(ngModel)]="term" required>
+      <mat-error *ngIf="termValidatorCtrl.invalid">{{getErrorMessage()}}</mat-error>
     </mat-form-field>
   </div>
   <div>
-    <button mat-raised-button color="primary" class="btnSearch" (click)="btnSearchData()">Search Data</button>
+    <button mat-raised-button color="primary" class="btnSearch" (click)="btnSearchData()">Найти</button>
   </div>
 </div>
 
