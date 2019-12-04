@@ -21,3 +21,8 @@ export interface ISocialInfo {
   followers: number;
   folowing: number;
 }
+
+export interface IItem {
+    id: number;
+    html_url: string;
+}

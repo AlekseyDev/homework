@@ -1,7 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {ICity} from '../dto/Interfaces';
-import { cities } from '../mock/cities';
-import {CitiesContinentFilterPipe} from '../pipes/cities-continent-filter.pipe';
 
 @Component({
   selector: 'app-root',
