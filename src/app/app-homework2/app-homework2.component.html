@@ -1,9 +1,23 @@
-<input [(ngModel)]="term" placeholder="name"/>
+<div class="divSeachPanel">
+  <div class="divMatFieldSearch">
+    <mat-form-field class="search-input-data">
+      <input matInput placeholder="search data..." value="Angular" [(ngModel)]="term">
+    </mat-form-field>
+  </div>
+  <div>
+    <button mat-raised-button color="primary" class="btnSearch" (click)="btnSearchData()">Search Data</button>
+  </div>
+</div>
 
-<button (click)="btnSearchData()">Search</button>
-
-<ul>
-  <li *ngFor="let item of items">
-    <span>{{item.id}}</span>
-  </li>
-</ul>
+<mat-list>
+  <mat-list-item *ngFor="let item of items" class="matItem">
+    <img matListAvatar [src]="item.owner.avatar_url">
+    <h3 matLine> {{item.name}} </h3>
+    <p matLine>
+      <span>Описание: {{item.description}} </span>
+    </p>
+    <p matLine>
+      <span>Адрес: <a [href]="item.html_url">{{item.html_url}}</a></span>
+    </p>
+  </mat-list-item>
+</mat-list>

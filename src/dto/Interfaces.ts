@@ -25,4 +25,10 @@ export interface ISocialInfo {
 export interface IItem {
     id: number;
     html_url: string;
+    url: string;
+    name: string;
+    owner: {
+      avatar_url: string;
+    };
+    description: string;
 }

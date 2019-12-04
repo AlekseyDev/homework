@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {MatCardModule, MatGridListModule} from '@angular/material';
+import {MatButtonModule, MatCardModule, MatFormFieldModule, MatGridListModule, MatInputModule, MatListModule} from '@angular/material';
 import { CitiesContinentFilterPipe } from '../pipes/cities-continent-filter.pipe';
 import { AppCityComponent } from './app-homework1/app-city/app-city.component';
 import { AppPopularityComponent } from './app-homework1/app-popularity/app-popularity.component';
@@ -13,6 +13,7 @@ import {GithubService} from '../services/github.service';
 import {InterceptorService} from '../services/interceptor.service';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,12 @@ import {FormsModule} from '@angular/forms';
     HttpClientModule,
     MatCardModule,
     MatGridListModule,
-    FormsModule
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatListModule
   ],
   providers: [
     CitiesContinentFilterPipe,

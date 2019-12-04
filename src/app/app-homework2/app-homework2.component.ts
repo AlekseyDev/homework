@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {CitiesContinentFilterPipe} from '../../pipes/cities-continent-filter.pipe';
 import {GithubService} from '../../services/github.service';
 import {IItem} from '../../dto/Interfaces';
+import {MatInputModule} from '@angular/material/input';
 
 @Component({
   selector: 'app-homework2',

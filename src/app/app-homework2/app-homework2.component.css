@@ -1,0 +1,27 @@
+.search-input-data {
+  width: 100%;
+}
+
+.btnSearch{
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+.divSeachPanel {
+  display: inline-flex;
+  width:100%
+}
+
+.divMatFieldSearch {
+  width:80%
+}
+
+.matItem {
+  border-bottom: solid 1px grey;
+}
+
+.matItem h3 {
+  font-weight: bold;
+  font-size: medium;
+  margin-bottom: 5px;
+}
