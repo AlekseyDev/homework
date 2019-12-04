@@ -15,9 +15,9 @@ export class GithubService {
     console.log(baseUrl);
   }
 
-  public getData(): Observable<any> {
+  public getData(term: string): Observable<any> {
     let params1 = new HttpParams();
-    params1 = params1.append('q', 'tetris+language:assembly');
+    params1 = params1.append('q', term);
     params1 = params1.append('sort', 'stars');
     params1 = params1.append('order', 'desc');
 

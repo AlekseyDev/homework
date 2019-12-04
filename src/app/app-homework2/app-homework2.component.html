@@ -1,1 +1,9 @@
-<p>app-homework2 works!</p>
+<input [(ngModel)]="term" placeholder="name"/>
+
+<button (click)="btnSearchData()">Search</button>
+
+<ul>
+  <li *ngFor="let item of items">
+    <span>{{item.id}}</span>
+  </li>
+</ul>

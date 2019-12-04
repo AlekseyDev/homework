@@ -12,6 +12,7 @@ import { AppHomework2Component } from './app-homework2/app-homework2.component';
 import {GithubService} from '../services/github.service';
 import {InterceptorService} from '../services/interceptor.service';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
     BrowserModule,
     HttpClientModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    FormsModule
   ],
   providers: [
     CitiesContinentFilterPipe,

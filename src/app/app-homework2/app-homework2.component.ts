@@ -10,19 +10,24 @@ import {IItem} from '../../dto/Interfaces';
 })
 export class AppHomework2Component implements OnInit {
 
+  public term: string;
+
   constructor(
     private citiesContinentPipe: CitiesContinentFilterPipe,
-    private citiesService: GithubService
+    private gitHubService: GithubService
   ) { }
 
   public items: IItem[] = [];
 
   ngOnInit() {
-    // tslint:disable-next-line:no-debugger
-    debugger;
-    const data = this.citiesService.getData();
-    data.subscribe((data1) => {
-      this.items = data1.items;
-    });
+  }
+
+  public btnSearchData(): void {
+        if (this.term !== '') {
+            const data = this.gitHubService.getData(this.term);
+            data.subscribe((data1) => {
+              this.items = data1.items;
+            });
+        }
   }
 }
